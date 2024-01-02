@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "796a22af-79bb-4020-8001-08324aa8d8a5",
+		"name": "TODO_APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30661008"
+	},
+	"item": [
+		{
+			"name": "Add_Todo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "todoText",
+							"value": "goto office",
+							"type": "text"
+						},
+						{
+							"key": "isDone",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://mobileproject2.000webhostapp.com/add_todo.php",
+					"protocol": "https",
+					"host": [
+						"mobileproject2",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"add_todo.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_Todo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "todoText",
+							"value": "i dont know",
+							"type": "text"
+						},
+						{
+							"key": "isDone",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "14",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://mobileproject2.000webhostapp.com/update_todo.php",
+					"protocol": "https",
+					"host": [
+						"mobileproject2",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"update_todo.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Todo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://mobileproject2.000webhostapp.com/get_todo.php",
+					"protocol": "https",
+					"host": [
+						"mobileproject2",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"get_todo.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_Todo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "14",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://mobileproject2.000webhostapp.com/delete_todo.php",
+					"protocol": "https",
+					"host": [
+						"mobileproject2",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"delete_todo.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
