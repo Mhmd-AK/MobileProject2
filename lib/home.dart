@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'todo.dart';
 import 'colors.dart';
@@ -66,7 +65,7 @@ class _HomeState extends State<Home> {
       });
       _showSuccessMessage('Todo added successfully');
     } catch (e) {
-      // Handle error, show an error message or log the error
+      // show an error message or log the error
       _showErrorMessage('Failed to add todo: $e');
     } finally {
       setState(() {
@@ -76,7 +75,6 @@ class _HomeState extends State<Home> {
   }
 
   void _showSuccessMessage(String message) {
-    // Implement your logic to show a success message (e.g., a Snackbar)
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(message),
@@ -87,7 +85,6 @@ class _HomeState extends State<Home> {
   }
 
   void _showErrorMessage(String message) {
-    // Implement your logic to show an error message (e.g., a Snackbar)
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(message),
@@ -231,8 +228,7 @@ class _HomeState extends State<Home> {
       });
 
       _showErrorMessage('Error updating todo status: $e');
-
-      // Handle error, show an error message, or log the error
+      // show an error message
       print('Error updating todo status: $e');
     }
   }
@@ -260,8 +256,7 @@ class _HomeState extends State<Home> {
     }
   }
 
-  final List<ToDo> _originalToDoList =
-  []; // Add this line to store the original list
+  final List<ToDo> _originalToDoList = [];
 
   void _runFilter(String enteredKeyword) {
     List<ToDo> results = [];
@@ -271,8 +266,7 @@ class _HomeState extends State<Home> {
     }
 
     if (enteredKeyword.isEmpty) {
-      results =
-          _originalToDoList; // Use the original list when keyword is empty
+      results = _originalToDoList;
     } else {
       results = _foundToDo
           .where((item) => item.todoText

@@ -22,7 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $response['message'] = 'Todo updated successfully';
                 $response['todo'] = array('id' => (string)$id, 'todoText' => $todoText, 'isDone' => $isDone);
 
-              //  $response['todo'] = array('id' => $id, 'todoText' => $todoText, 'isDone' => $isDone);
             } else {
                 $response['success'] = false;
                 $response['message'] = 'Error updating todo: ' . mysqli_error($conn);
